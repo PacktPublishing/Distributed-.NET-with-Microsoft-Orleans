@@ -18,7 +18,7 @@ namespace ConsoleClinetApp
 
                 using (var client = await ConnectClient())
                 {
-                    var discountWorker = client.GetGrain<IDiscountComputeGrain>(0);
+                    var discountWorker = client.GetGrain<IDiscountCalculator>(0);
                     var discount = await discountWorker.ComputeDiscount(150);
                     Console.WriteLine($"Discount for the Amount ${150} is ${discount}");
 

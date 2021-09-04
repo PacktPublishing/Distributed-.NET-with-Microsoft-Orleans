@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Distel.Grains
 {
     [StatelessWorker(maxLocalWorkers: 1)]
-    public class DiscountComputeGrain : Grain, IDiscountComputeGrain
+    public class DiscountCalculator : Grain, IDiscountCalculator
     {
         public async Task<decimal> ComputeDiscount(decimal price)
         {

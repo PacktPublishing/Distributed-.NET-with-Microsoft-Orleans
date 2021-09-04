@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Distel.Grains.Interfaces
 {
-    public interface IDiscountComputeGrain : IGrainWithIntegerKey
+    public interface IDiscountCalculator : IGrainWithIntegerKey
     {
         Task<decimal> ComputeDiscount(decimal price);
     }
