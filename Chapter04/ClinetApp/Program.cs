@@ -68,14 +68,14 @@ namespace ConsoleClinetApp
             for (int i = 0; i < 1000; i++)
             {
 
-                var hotel = client.GetGrain<IHotel>(Guid.NewGuid().ToString());
-                //var hotel1 = client.GetGrain<IHotel>("Distel.Agra");
+                var hotel = client.GetGrain<IHotelGrain>(Guid.NewGuid().ToString());
+                //var hotel1 = client.GetGrain<IHotelGrain>("Distel.Agra");
 
                 Console.WriteLine("Hotel Grain PrimaryKey : " + await hotel.GetKey());
                 Console.WriteLine("Identity String : " + hotel.GetGrainIdentity().IdentityString);
                 //Console.WriteLine("Identity String : " + hotel1.GetGrainIdentity().IdentityString);
 
-                var response = await hotel.WelcomeGreeting(guest);
+                var response = await hotel.WelcomeGreetingAsync(guest);
                 Console.WriteLine($"\n\n{response}\n\n");
             }
         }

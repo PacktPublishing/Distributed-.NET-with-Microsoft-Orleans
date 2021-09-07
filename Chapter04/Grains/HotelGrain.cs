@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Distel.Grains
 {
-    public class HotelGrain : Grain, IHotel
+    public class HotelGrain : Grain, IHotelGrain
     {
         private readonly ILogger logger;
 
@@ -26,7 +26,7 @@ namespace Distel.Grains
             return Task.FromResult(100.00M);
         }
 
-        public async Task OnboardFromOtherHotel(IHotel fromHotel, string guestName)
+        public async Task OnboardFromOtherHotel(IHotelGrain fromHotel, string guestName)
         {
             logger.LogInformation($"Fetching the due from previous hotel for {guestName}");
             await fromHotel.ComputeDue(guestName);
@@ -34,9 +34,9 @@ namespace Distel.Grains
             logger.LogInformation($"Onbarded the guest from other hotel {guestName}");
         }
 
-        public Task<string> WelcomeGreeting(string guestName)
+        public Task<string> WelcomeGreetingAsync(string guestName)
         {
-            logger.LogInformation($"\n WelcomeGreeting message received: greeting = '{guestName}'");
+            logger.LogInformation($"\n WelcomeGreetingAsync message received: greeting = '{guestName}'");
             return Task.FromResult($"Dear {guestName}, We welcome you to Distel and hope you enjoy a comfortable stay at our hotel. ");
         }
     }

@@ -34,8 +34,8 @@ namespace Distel.WebHost.Controllers
         [HttpGet("welcome/{hotel}/{guestname}")]
         public async Task<IActionResult> WelcomeGuest([FromRoute]string hotel, [FromRoute] string guestname)
         {
-            var hotelGrain = this.clusterClient.GetGrain<IHotel>(hotel);
-            var greeting = await hotelGrain.WelcomeGreeting(guestname);
+            var hotelGrain = this.clusterClient.GetGrain<IHotelGrain>(hotel);
+            var greeting = await hotelGrain.WelcomeGreetingAsync(guestname);
             return Ok(greeting);
         }
     }
