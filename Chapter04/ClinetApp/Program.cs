@@ -18,9 +18,9 @@ namespace ConsoleClinetApp
 
                 using (var client = await ConnectClient())
                 {
-                    var discountWorker = client.GetGrain<IDiscountCalculator>(0);
-                    var discount = await discountWorker.ComputeDiscount(150);
-                    Console.WriteLine($"Discount for the Amount ${150} is ${discount}");
+                    //var discountWorker = client.GetGrain<IDiscountCalculator>(0);
+                    //var discount = await discountWorker.ComputeDiscount(150);
+                    //Console.WriteLine($"Discount for the Amount ${150} is ${discount}");
 
                     while (true)
                     {
@@ -65,14 +65,14 @@ namespace ConsoleClinetApp
 
         private static async Task SendWelComeGreeting(IClusterClient client, string guest)
         {
-            for (int i = 0; i < 1000; i++)
+            //for (int i = 0; i < 1000; i++)
             {
 
                 var hotel = client.GetGrain<IHotelGrain>(Guid.NewGuid().ToString());
                 //var hotel1 = client.GetGrain<IHotelGrain>("Distel.Agra");
 
-                Console.WriteLine("Hotel Grain PrimaryKey : " + await hotel.GetKey());
-                Console.WriteLine("Identity String : " + hotel.GetGrainIdentity().IdentityString);
+                //Console.WriteLine("Hotel Grain PrimaryKey : " + await hotel.GetKey());
+                //Console.WriteLine("Identity String : " + hotel.GetGrainIdentity().IdentityString);
                 //Console.WriteLine("Identity String : " + hotel1.GetGrainIdentity().IdentityString);
 
                 var response = await hotel.WelcomeGreetingAsync(guest);
