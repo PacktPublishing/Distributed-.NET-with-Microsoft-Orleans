@@ -136,25 +136,29 @@ namespace Distel.OrleansProviders
                     }
                 }
 
-                using (MemoryStream stream = new MemoryStream())
-                using (StreamWriter writer = new StreamWriter(stream))
-                using (JsonTextWriter jsonWriter = new JsonTextWriter(writer))
-                {
-                    JsonSerializer ser = new JsonSerializer();
-                    ser.Serialize(jsonWriter, grainState.State);
-                    jsonWriter.Flush();
-                    stream.Seek(0, SeekOrigin.Begin);
-                    await file.CreateAsync(stream.Length);
-                    var response = await file.UploadAsync(stream);
-                    grainState.ETag = response.Value.ETag.ToString();
-                }
-
+                grainState.ETag = await WritetoFileAsync(grainState, file);
                 grainState.RecordExists = true;
             }
             catch (Exception exc)
             {
                 this._logger.LogError(exc, $"Failure writing state for Grain Type {grainType} with Id {id}.");
                 throw;
+            }
+        }
+
+        private static async Task<string> WritetoFileAsync(IGrainState grainState, ShareFileClient file)
+        {
+            using (MemoryStream stream = new MemoryStream())
+            using (StreamWriter writer = new StreamWriter(stream))
+            using (JsonTextWriter jsonWriter = new JsonTextWriter(writer))
+            {
+                JsonSerializer ser = new JsonSerializer();
+                ser.Serialize(jsonWriter, grainState.State);
+                jsonWriter.Flush();
+                stream.Seek(0, SeekOrigin.Begin);
+                await file.CreateAsync(stream.Length);
+                var response = await file.UploadAsync(stream);
+                return response.Value.ETag.ToString();
             }
         }
 
