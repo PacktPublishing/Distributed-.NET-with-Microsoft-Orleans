@@ -35,8 +35,8 @@ namespace Distel.WebHost
                     .UseInMemoryReminderService()                    
                     .AddCosmosDBGrainStorageAsDefault(opt =>
                     {
-                        opt.AccountEndpoint = "https://testpersistentgrainstorage.documents.azure.com:443/";
-                        opt.AccountKey = "VByeFgClHvBye5hV1C8XwmRNcbsZUXXvgk4RYzYn40CBbtLtZx5Syk4Uih9csIYoIGIFgipsE7aLPnkJPTIEsA==";
+                        opt.AccountEndpoint = "<<Account endpoint>>";
+                        opt.AccountKey = "<<Account key>>";
                         opt.DB = "testpersistentgrainstorage";
                         opt.CanCreateResources = true;
                     })
