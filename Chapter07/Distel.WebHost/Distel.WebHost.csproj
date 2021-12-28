@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>8700977e-53e4-471b-aebc-09c6a30c217a</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
+    <PackageReference Include="Microsoft.Orleans.Server" Version="3.5.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="Orleans.Persistence.CosmosDB" Version="3.0.3" />
+    <PackageReference Include="OrleansDashboard" Version="3.6.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Distel.Grains.Interfaces\Distel.Grains.Interfaces.csproj" />
+    <ProjectReference Include="..\Distel.Grains\Distel.Grains.csproj" />
+  </ItemGroup>
+
+</Project>
