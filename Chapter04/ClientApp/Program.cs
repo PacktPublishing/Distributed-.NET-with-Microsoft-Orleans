@@ -2,11 +2,10 @@
 using Microsoft.Extensions.Logging;
 using Orleans;
 using Orleans.Configuration;
-using Orleans.Runtime;
 using System;
 using System.Threading.Tasks;
 
-namespace ConsoleClinetApp
+namespace ConsoleClientApp
 {
     class Program
     {
