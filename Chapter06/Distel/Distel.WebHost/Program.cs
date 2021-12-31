@@ -31,7 +31,7 @@ namespace Distel.WebHost
                     .UseInMemoryReminderService()
                     .AddCosmosDBGrainStorageAsDefault(opt =>
                     {
-                        opt.AccountEndpoint = "<<Avvount End point>>";
+                        opt.AccountEndpoint = "<<Account End point>>";
                         opt.AccountKey = "<<Account Key>>";
                         opt.DB = "<<DB Name>>";
                         opt.CanCreateResources = true;
