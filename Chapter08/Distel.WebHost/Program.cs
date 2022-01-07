@@ -28,7 +28,7 @@ namespace Distel.WebHost
                 .UseAzureStorageClustering((options) =>
                 {
                     options.TableName = "distelcluster";
-                    options.ConnectionString = "<<Azure table storage conneciton string>>";
+                    options.ConnectionString = "<<Azure table storage connection string>>";
                 })
                 .AddMemoryGrainStorageAsDefault()
                 .AddSimpleMessageStreamProvider("attractions-stream")
