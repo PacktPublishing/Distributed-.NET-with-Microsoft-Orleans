@@ -28,8 +28,10 @@ namespace ConsoleClientApp
 
                         if (guest == "exit")
                             break;
-                        await SendWelComeGreeting(client, guest);
+                        await SendWelcomeGreeting(client, guest);
                     }
+
+                    await client.Close();
                 }   
 
                 return 0;
@@ -62,7 +64,7 @@ namespace ConsoleClientApp
             return client;
         }
 
-        private static async Task SendWelComeGreeting(IClusterClient client, string guest)
+        private static async Task SendWelcomeGreeting(IClusterClient client, string guest)
         {
             //for (int i = 0; i < 1000; i++)
             {
