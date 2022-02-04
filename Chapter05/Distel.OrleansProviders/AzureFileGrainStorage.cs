@@ -16,6 +16,9 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
+//NOTE: This is just to demonstrate building of Orleans storage providers.
+//      This is not production ready.
+
 namespace Distel.OrleansProviders
 {
     /// <summary>
@@ -124,18 +127,6 @@ namespace Distel.OrleansProviders
             ShareFileClient file = directory.GetFileClient(id);
             try
             {
-
-                var isfileExists = await file.ExistsAsync();
-
-                if (isfileExists)
-                {
-                    var properties = file.GetProperties();
-                    if (properties.Value.ETag.ToString() != grainState.ETag)
-                    {
-                        throw new InconsistentStateException("State mismatch", grainState.ETag, properties.Value.ETag.ToString());
-                    }
-                }
-
                 grainState.ETag = await WritetoFileAsync(grainState, file);
                 grainState.RecordExists = true;
             }
@@ -148,6 +139,17 @@ namespace Distel.OrleansProviders
 
         private static async Task<string> WritetoFileAsync(IGrainState grainState, ShareFileClient file)
         {
+            var isfileExists = file.Exists();
+
+            if (isfileExists)
+            {
+                var properties = file.GetProperties();
+                if (properties.Value.ETag.ToString() != grainState.ETag)
+                {
+                    throw new InconsistentStateException("State mismatch", grainState.ETag, properties.Value.ETag.ToString());
+                }
+            }
+
             using (MemoryStream stream = new MemoryStream())
             using (StreamWriter writer = new StreamWriter(stream))
             using (JsonTextWriter jsonWriter = new JsonTextWriter(writer))
@@ -156,7 +158,7 @@ namespace Distel.OrleansProviders
                 ser.Serialize(jsonWriter, grainState.State);
                 jsonWriter.Flush();
                 stream.Seek(0, SeekOrigin.Begin);
-                await file.CreateAsync(stream.Length);
+                file.Create(stream.Length);
                 var response = await file.UploadAsync(stream);
                 return response.Value.ETag.ToString();
             }

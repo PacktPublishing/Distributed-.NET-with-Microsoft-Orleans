@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Orleans;
 using Orleans.Runtime;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Distel.Grains
@@ -28,11 +29,6 @@ namespace Distel.Grains
 
         public override Task OnActivateAsync()
         {
-            if(checkedInGuests.State == null)
-            {
-                checkedInGuests.State = new List<UserCheckIn>();
-                partners.State = new List<Partner>();
-            }
             return base.OnActivateAsync();
         }
 
@@ -79,8 +75,11 @@ namespace Distel.Grains
 
         public async Task AssociatePartner(Partner partner)
         {
-            this.partners.State.Add(partner);
-            await this.partners.WriteStateAsync();
+            if (!this.partners.State.Any(e => e.Id == partner.Id))
+            {
+                this.partners.State.Add(partner);
+                await this.partners.WriteStateAsync();
+            }
         }
     }
 }
