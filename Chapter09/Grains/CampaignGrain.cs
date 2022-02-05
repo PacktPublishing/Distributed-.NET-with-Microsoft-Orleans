@@ -11,5 +11,11 @@ namespace Distel.Grains
             // Do something to check the campaign effectiveness
             return Task.CompletedTask;
         }
+
+        public Task ReceiveUserEngagementUpdate(int hitCount)
+        {
+            // Do something to check the campaign effectiveness
+            return Task.CompletedTask;
+        }
     }
 }
