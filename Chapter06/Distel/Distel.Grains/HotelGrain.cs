@@ -94,6 +94,7 @@ namespace Distel.Grains
 
         Task IRemindable.ReceiveReminder(string reminderName, TickStatus status)
         {
+            //In real world scenario, reminder can be sent to on duty person in cleaning department 
             Console.WriteLine("Reminder to Clean the room");
             return Task.CompletedTask;
         }
