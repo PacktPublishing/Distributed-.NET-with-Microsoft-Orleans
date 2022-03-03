@@ -1,6 +1,6 @@
 ﻿using Orleans;
 
-namespace Distel.Grains.Abstractions
+namespace Distel.Grains.Interfaces
 {
     public interface IHotelGrain : IGrainWithStringKey
     {

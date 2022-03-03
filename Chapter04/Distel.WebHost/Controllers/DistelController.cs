@@ -1,4 +1,4 @@
-﻿using Distel.Grains.Abstractions;
+﻿using Distel.Grains.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Orleans;
 

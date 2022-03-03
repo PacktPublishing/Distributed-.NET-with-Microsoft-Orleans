@@ -1,4 +1,4 @@
-﻿using Distel.Grains.Abstractions;
+﻿using Distel.Grains.Interfaces;
 using Orleans;
 using Orleans.Concurrency;
 using System.Threading.Tasks;

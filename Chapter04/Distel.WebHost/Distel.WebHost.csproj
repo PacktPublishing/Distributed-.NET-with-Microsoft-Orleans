@@ -15,7 +15,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Grain.Interfaces\Distel.Grains.Abstractions.csproj" />
+		<ProjectReference Include="..\Grain.Interfaces\Distel.Grains.Interfaces.csproj" />
 		<ProjectReference Include="..\Grains\Distel.Grains.csproj" />
 	</ItemGroup>
 

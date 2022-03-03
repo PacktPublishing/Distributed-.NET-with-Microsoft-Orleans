@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32104.313
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Distel.Grains.Abstractions", "Grain.Interfaces\Distel.Grains.Abstractions.csproj", "{8CA54EBD-4E27-4FC7-983E-7CF00D9D1EE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Distel.Grains.Interfaces", "Grain.Interfaces\Distel.Grains.Interfaces.csproj", "{8CA54EBD-4E27-4FC7-983E-7CF00D9D1EE4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Distel.Grains", "Grains\Distel.Grains.csproj", "{B4B65B21-CC77-4DB7-9277-5E881EA24A69}"
 EndProject
