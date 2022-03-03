@@ -1,7 +1,11 @@
 ﻿using Orleans;
 using Orleans.Concurrency;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Distel.Grains.Abstractions
+namespace Distel.Grains.Interfaces
 {
     public interface IAsset : IGrainWithStringKey
     {
