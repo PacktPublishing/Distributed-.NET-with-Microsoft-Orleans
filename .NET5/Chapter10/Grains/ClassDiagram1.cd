@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Distel.Grains.HotelGrain">
+    <Position X="1" Y="4.25" Width="2.75" />
+    <Members>
+      <Field Name="checkedInGuests" Hidden="true" />
+      <Field Name="client" Hidden="true" />
+      <Field Name="displayBoardId" Hidden="true" />
+      <Field Name="hitCount" Hidden="true" />
+      <Field Name="logger" Hidden="true" />
+      <Field Name="partners" Hidden="true" />
+      <Field Name="stream" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ECAAAAQAQAAAAACDIAEAEgQAACAAAAAACAABJABBARA=</HashCode>
+      <FileName>HotelGrain.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Distel.Grains.CampaignGrain" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CampaignGrain.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Distel.Grains.Interfaces.ICompaignGrain" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Distel.Grains.Interfaces.IHotelGrain" Collapsed="true">
+    <Position X="1" Y="2.75" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
