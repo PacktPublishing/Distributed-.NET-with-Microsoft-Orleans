@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.9.0" />
+    <PackageReference Include="Microsoft.Orleans.Runtime.Abstractions" Version="3.6.0" />
+  </ItemGroup>
+
+</Project>
