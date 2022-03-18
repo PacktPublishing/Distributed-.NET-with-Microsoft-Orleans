@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<UserSecretsId>7d477818-15a1-4bd7-8228-0a70335ed7da</UserSecretsId>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Azure.Identity" Version="1.5.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Orleans.Clustering.AzureStorage" Version="3.6.0" />
+		<PackageReference Include="Microsoft.Orleans.Server" Version="3.6.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.0" />
+		<PackageReference Include="Orleans.Persistence.CosmosDB" Version="3.0.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Distel.DataTier.Abstractions\Distel.DataTier.Abstractions.csproj" />
+		<ProjectReference Include="..\Distel.DataTier\Distel.DataTier.csproj" />
+		<ProjectReference Include="..\Distel.Grains2\Distel.Grains2.csproj" />
+		<ProjectReference Include="..\Distel.OrleansProviders\Distel.OrleansProviders.csproj" />
+		<ProjectReference Include="..\Grain.Interfaces\Distel.Grains.Interfaces.csproj" />
+	</ItemGroup>
+
+</Project>
