@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>1c668c25-0c37-410d-bb43-aee4bf0767cf</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Orleans.Hosting.Kubernetes" Version="3.6.0" />
+    <PackageReference Include="Microsoft.Orleans.Persistence.AzureStorage" Version="3.6.0" />
+    <PackageReference Include="Microsoft.Orleans.Server" Version="3.6.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+    <PackageReference Include="Orleans.Clustering.Redis" Version="3.2.1" />
+    <PackageReference Include="Orleans.Persistence.Redis" Version="3.2.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Grain.Interfaces\Distel.Grains.Interfaces.csproj" />
+    <ProjectReference Include="..\Grains\Distel.Grains.csproj" />
+  </ItemGroup>
+
+</Project>
