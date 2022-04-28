@@ -41,10 +41,10 @@ With the following software and hardware list you can run all code files present
 ### Software and Hardware List
 | Chapter | Software/Hardware required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
-| 1-11 | C# | Windows Mac OS X |
-| 1-11 | .NET 6 | Windows Mac OS X |
-| 1-11 | Visual Studio 2022 | Windows Mac OS X |
-| 1-11 | Microsoft Azure | Windows Mac OS X |
+| 1-11 | C# | Windows Mac OS X and Linux |
+| 1-11 | .NET 6 | Windows Mac OS X and Linux  |
+| 1-11 | Visual Studio 2022 | Windows Mac OS X and Linux  |
+| 1-11 | Microsoft Azure | Windows Mac OS X and Linux  |
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781801818971_ColorImages.pdf).
 
