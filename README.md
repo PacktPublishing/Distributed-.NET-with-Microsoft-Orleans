@@ -4,7 +4,7 @@
 
 This is the code repository for [Distributed .NET with Microsoft Orleans](https://www.packtpub.com/product/distributed-net-with-microsoft-orleans/9781801818971), published by Packt.
 
-**A guide to Teams architecture and integration for advanced end users and administrators**
+**Build robust and highly scalable distributed applications without worrying about complex programming patterns**
 
 ## What is this book about?
 Building distributed applications in this modern era can be a tedious task as customers expect high availability, high performance, and improved resilience. With the help of this book, you'll discover how you can harness the power of Microsoft Orleans to build impressive distributed applications.
