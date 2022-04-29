@@ -1,6 +1,6 @@
 # Distributed .NET with Microsoft Orleans
 
-<a href="https://www.packtpub.com/product/distributed-net-with-microsoft-orleans/9781801818971"><img src="https://static.packt-cdn.com/products/9781801818971/cover/smaller" alt="Digital Marketing with Drupal" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/product/distributed-net-with-microsoft-orleans/9781801818971"><img src="https://static.packt-cdn.com/products/9781801818971/cover/smaller" alt="Distributed .NET with Microsoft Orleans" height="256px" align="right"></a>
 
 This is the code repository for [Distributed .NET with Microsoft Orleans](https://www.packtpub.com/product/distributed-net-with-microsoft-orleans/9781801818971), published by Packt.
 
